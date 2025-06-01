@@ -603,3 +603,7 @@ ANALYZE TABLE audit_logs;
    - Implement role-based database access
    - Regular access reviews
 */
+
+-- Performance indexes for common queries
+CREATE INDEX idx_users_email_role_active ON users(email, role, is_active);
+CREATE INDEX idx_sessions_active ON user_sessions(user_id, expires_at);
