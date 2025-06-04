@@ -110,3 +110,11 @@ The MySQL schema includes:
 ## License
 
 MIT
+
+
+## Database Setup
+
+Import the schema:
+```bash
+mysql -u root -p < database.sql
+```
