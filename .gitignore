@@ -138,3 +138,7 @@ dist
 # Backend logs
 backend/logs/
 backend/uploads/
+
+# Coverage
+coverage/
+*.lcov
