@@ -607,3 +607,14 @@ ANALYZE TABLE audit_logs;
 -- Performance indexes for common queries
 CREATE INDEX idx_users_email_role_active ON users(email, role, is_active);
 CREATE INDEX idx_sessions_active ON user_sessions(user_id, expires_at);
+
+
+-- Cleanup stored procedure
+DELIMITER //
+CREATE PROCEDURE cleanup_expired_data()
+BEGIN
+  DELETE FROM user_sessions WHERE expires_at < UTC_TIMESTAMP();
+  DELETE FROM otp_verifications WHERE expires_at < UTC_TIMESTAMP();
+  DELETE FROM temp_registrations WHERE expires_at < UTC_TIMESTAMP();
+END //
+DELIMITER ;
