@@ -118,3 +118,15 @@ Import the schema:
 ```bash
 mysql -u root -p < database.sql
 ```
+
+
+## API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | /api/auth/login | Login with credentials |
+| POST | /api/auth/register | Register new account |
+| POST | /api/auth/verify-otp | Verify email OTP |
+| POST | /api/auth/refresh | Refresh access token |
+| POST | /api/auth/logout | Logout current session |
+| GET | /api/auth/profile | Get user profile |
