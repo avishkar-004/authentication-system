@@ -53,3 +53,7 @@
 /* Loading spinner */
 .spinner { width: 40px; height: 40px; border: 3px solid rgba(40,167,69,0.2); border-radius: 50%; border-top-color: #28a745; animation: spin 0.8s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
+
+/* Card hover effect */
+.card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+.card-hover:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
