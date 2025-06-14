@@ -142,3 +142,7 @@ backend/uploads/
 # Coverage
 coverage/
 *.lcov
+
+# IDE files
+.vscode/
+.idea/
