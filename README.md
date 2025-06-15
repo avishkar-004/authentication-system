@@ -130,3 +130,13 @@ mysql -u root -p < database.sql
 | POST | /api/auth/refresh | Refresh access token |
 | POST | /api/auth/logout | Logout current session |
 | GET | /api/auth/profile | Get user profile |
+
+
+## Security Features
+
+- JWT with access and refresh token rotation
+- Bcrypt password hashing with configurable salt rounds
+- Rate limiting on authentication endpoints
+- Session management with device tracking
+- Input validation and sanitization
+- CORS and helmet security headers
