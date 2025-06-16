@@ -618,3 +618,9 @@ BEGIN
   DELETE FROM temp_registrations WHERE expires_at < UTC_TIMESTAMP();
 END //
 DELIMITER ;
+
+
+-- Event scheduler for automatic cleanup
+CREATE EVENT IF NOT EXISTS cleanup_expired_sessions
+ON SCHEDULE EVERY 1 HOUR
+DO CALL cleanup_expired_data();
