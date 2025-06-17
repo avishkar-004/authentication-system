@@ -57,3 +57,6 @@
 /* Card hover effect */
 .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
 .card-hover:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+
+/* Form input focus ring */
+input:focus, select:focus, textarea:focus { border-color: #28a745; box-shadow: 0 0 0 3px rgba(40,167,69,0.25); outline: none; }
