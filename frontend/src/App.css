@@ -60,3 +60,6 @@
 
 /* Form input focus ring */
 input:focus, select:focus, textarea:focus { border-color: #28a745; box-shadow: 0 0 0 3px rgba(40,167,69,0.25); outline: none; }
+
+/* Responsive modal */
+@media (max-width: 768px) { .modal { width: 95%; margin: 10px auto; } }
