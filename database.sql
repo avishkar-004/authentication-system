@@ -624,3 +624,7 @@ DELIMITER ;
 CREATE EVENT IF NOT EXISTS cleanup_expired_sessions
 ON SCHEDULE EVERY 1 HOUR
 DO CALL cleanup_expired_data();
+
+
+-- Index for audit log queries
+CREATE INDEX idx_audit_user_event ON audit_logs(user_id, event_type);
