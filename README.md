@@ -140,3 +140,14 @@ mysql -u root -p < database.sql
 - Session management with device tracking
 - Input validation and sanitization
 - CORS and helmet security headers
+
+
+## Running the Project
+
+```bash
+# Start backend
+cd backend && npm start
+
+# Start frontend
+cd frontend && npm run dev
+```
